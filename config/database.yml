@@ -1,0 +1,20 @@
+config: &config
+  adapter: postgresql
+  encoding: unicode
+  username: postgres
+  password: postgres
+  pool: 5
+  host: localhost
+
+
+development:
+  database: practical_development
+  <<: *config
+
+production:
+  database: practical_production
+  <<: *config
+
+test:
+  database: practical_test
+  <<: *config
